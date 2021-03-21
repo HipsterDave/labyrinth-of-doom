@@ -238,7 +238,7 @@ def level_1():
             random_number_player1 = random.choice(numbers_player1)
             time.sleep(1)
             typing(str(random_number_player1) + "!\n")
-            added_damage_level = numbers_player1 + saveload.data.primary.damage
+            added_damage_level = random_number_player1 + saveload.data.primary.damage
             typing("Added with your damage level, you attack the monster with a damage level of " + str(added_damage_level) + ".\n")
             if added_damage_level >= random_monster_number:
                 typing("Yay! You beat the monster!\n")
