@@ -16,12 +16,13 @@ def typing(text):
 
 class Info():
 	def __init__(self):
-		self.primary = ""
-		self.secondary = ""
-		self.armor = ""
+		self.primary = items.no_primary
+		self.secondary = items.no_secondary
+		self.armor = items.no_armor
 		self.name = ""
 		self.Class = ""
 		self.coins = 0
+		self.savepoint = 1
 
 data = Info()
 
@@ -49,7 +50,7 @@ def login():
 	file = "{}_{}.pickle".format(username, password)
 	if os.path.exists(file):
 		data = load()
-		comeback()
+		game.welcome_back()
 	else:
 		typing("This account doesn't seem to exist...\n")
 		time.sleep(2)
