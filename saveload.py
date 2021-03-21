@@ -27,7 +27,10 @@ class Info():
 data = Info()
 
 def clear():
-	os.system("cls")
+	if sys.platform.startswith("linux"):
+		os.system("clear")
+	elif sys.platform.startswith("win32"):
+		os.system("cls")
 
 def login_or_signup():
 	print("1) Login")
