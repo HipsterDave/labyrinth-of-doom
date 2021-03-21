@@ -19,6 +19,8 @@ def clear():
 		os.system("clear")
 	elif sys.platform.startswith("win32"):
 		os.system("cls")
+	elif sys.platform.startswith("darwin"):
+		os.system("clear")
 
 def mainmenu():
     clear()
